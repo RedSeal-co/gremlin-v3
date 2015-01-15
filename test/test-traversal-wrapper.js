@@ -651,6 +651,25 @@ suite('traversal-wrapper', function () {
       .done(done);
   });
 
+  test.only('select...by(string)', function (done) {
+    var traversal = g.V().as('a').out().as('b').select().by('name');
+    dlog('select...by(string): ', traversal.unwrap().toStringSync());
+    traversal.toArray()
+      .then(function (actual) {
+        var expected = [
+          {'a': 'marko', 'b': 'lop'},
+          {'a': 'marko', 'b': 'vadas'},
+          {'a': 'marko', 'b': 'josh'},
+          {'a': 'josh', 'b': 'ripple'},
+          {'a': 'josh', 'b': 'lop'},
+          {'a': 'peter', 'b': 'lop'},
+        ];
+        expected = [];
+        assert.deepEqual(actual, expected);
+      })
+      .done(done);
+  });
+
   // TODO
   // TraversalWrapper.prototype.idEdge = function () {
   // TraversalWrapper.prototype.id = function () {
