@@ -794,7 +794,7 @@ suite('traversal-wrapper', function () {
   });
 
   test('inject("daniel")', function (done) {
-    g.V().has('name', 'josh').out().values('name').inject(['daniel']).toArray(function (err, actual) {
+    g.V().has('name', 'josh').out().values('name').inject('daniel').toArray(function (err, actual) {
       var expected = ['daniel', 'ripple', 'lop'];
       assert.deepEqual(actual, expected);
       done();
