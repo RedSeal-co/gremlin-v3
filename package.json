@@ -51,7 +51,7 @@
   "dependencies": {
     "debug": "^2.1.1",
     "glob": "~4.3.5",
-    "java": "git://github.com/RedSeal-co/node-java.git#varargs.r3",
+    "redseal-java": "^0.5.0",
     "json-stable-stringify": "^1.0.0",
     "lodash": "^3.2.0",
     "q": "^1.1.2"
