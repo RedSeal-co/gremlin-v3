@@ -3,11 +3,13 @@ gremlin-v3
 
 [![Build Status](https://travis-ci.org/jimlloyd/gremlin-v3.svg)](https://travis-ci.org/jimlloyd/gremlin-v3)
 
+**NOTE: This project is no longer being maintained. The project owners instead now use [ts-tinkerpop](https://github.com/RedSeal-co/ts-tinkerpop),
+which takes advantage of [ts-java](https://github.com/RedSeal-co/ts-java). We suggest you take a look at those two
+projects.**
+
 Implementation of [Gremlin/TinkerPop3](https://github.com/tinkerpop/tinkerpop3) for node.js. Gremlin-v3 is a javascript wrapper around the TinkerPop3 API. The node-java module provides the bridge between node and Java.
 
 **NOTE: This package is compatible with TinkerPop3. For TinkerPop2 compatibility, see the upstream repository [gremlin-node](https://github.com/inolen/gremlin-node).**
-
-**NOTE: This is a Work In Progress. Unit tests pass using TinkerPop3, but much of the TinkerPop2 heritage is still present.  **
 
 ```javascript
 var Gremlin = require('gremlin');
